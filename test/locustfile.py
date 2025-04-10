@@ -6,10 +6,10 @@ class HelloWorldUser(HttpUser):
     def async_sleep(self):
         self.client.get("/async_sleep")
 
-    # @task
-    # def async_sleep_await(self):
-    #     self.client.get("/async_sleep_await")
+    @task
+    def async_sleep_await(self):
+        self.client.get("/async_sleep_await")
 
-    # @task
-    # def sync_sleep(self):
-    #     self.client.get("/sync_sleep")
+    @task
+    def sync_sleep(self):
+        self.client.get("/sync_sleep")
